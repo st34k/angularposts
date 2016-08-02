@@ -1,0 +1,21 @@
+.input-posts{
+  width:90%;
+ /* border: 1px solid;*/
+  padding:15px;
+   float:left;
+}
+
+#new-post{
+  background-color:lightyellow;
+  border: 2px gray solid;
+  width:30%;
+  margin-right:3%;
+
+}
+.new-post{
+ 
+  width: 100%;
+  border: 1px solid black;
+  padding: 2%;
+  margin: 2%;
+}

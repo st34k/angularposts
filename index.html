@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.css"/>
+<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+  <title>Fiddling with Angular!</title>
+</head>
+<body ng-app = "PostsApp">
+
+  <div class = "main container">
+    <div class = "main-header">
+      <h2>Add A New Post!</h2>
+    </div>
+
+    <div class = "input-posts" ng-controller="addingPosts">
+      <form id="posts-form" >
+      <input id = "new-post" type="text" placeholder="write your post here" ng-model="newPos"/>
+      <button ng-click = "posting()" class = "btn btn-success">Post!</button>
+      </form>
+
+      <div class="new-post" ng-repeat="post in postsArray  track by $index">
+       {{post.text}} 
+       <i class="fa fa-thumbs-up" aria-hidden="true" ng-model="thumbs" ng-click="thumbsUp($index)">{{postsArray[$index].thumbs}}</i>
+      </div>
+
+
+    </div>
+  </div>
+
+<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
